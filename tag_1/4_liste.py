@@ -36,12 +36,11 @@ print_values(values)
 # print_values([1, 2, 3, 4], 2) => [3, 4]
 
 
-def filter_values_oldschool(values: list, a: int) -> list:
-    filtered_values: list = []
+def filter_values_oldschool(values: list, a: int):
     for value in values:
         if value > a:
-            filtered_values.append(value)
-    return filtered_values
+            yield value
+    # return filtered_values
 
 
 def filter_values(values: list, a: int) -> list:
